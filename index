@@ -1,0 +1,31 @@
+---
+layout: home
+title: Welcome
+---
+<div class="main-content">
+  <h1>Latest Analysis & News</h1>
+  <ul class="post-list">
+    {% for post in paginator.posts %}
+    <li>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <small>{{ post.date | date: "%B %d, %Y" }} in {{ post.categories | join: ", " }}</small>
+      <p>{{ post.excerpt }}</p>
+      <a href="{{ post.url }}">Read More →</a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}">More Posts</a>
+  {% endif %}
+</div>
+<aside>
+  <h3>Categories</h3>
+  <ul>
+    {% assign categories = site.categories | sort %}
+    {% for category in categories %}
+      <li><a href="/category/{{ category | first }}/">{{ category | first | capitalize }} ({{ category | last | size }})</a></li>
+    {% endfor %}
+  </ul>
+  <h3>About</h3>
+  <a href="/about.html">About This Site</a>
+</aside>
