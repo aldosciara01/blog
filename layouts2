@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body>
+    <div class="container post">
+      <h1>{{ page.title }}</h1>
+      <small>Published {{ page.date | date: '%B %d, %Y' }}{% if page.categories %} in {{ page.categories | join: ", " }}{% endif %}</small>
+      <div class="content">{{ content }}</div>
+      <a href="{{ site.baseurl }}/">← Back to Home</a>
+    </div>
+  </body>
+</html>
