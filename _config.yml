@@ -1,0 +1,30 @@
+title: Cook Political Inspired Blog
+description: "A blog site modeled after Cook Political Report, powered by Jekyll & GitHub Pages."
+baseurl: "" # Leave blank for root
+url: "https://aldosciara01.github.io"
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+paginate: 5
+paginate_path: "/page:num/"
+permalink: /:categories/:year/:month/:day/:title.html
+
+author:
+  name: "Your Name"
+  email: "your.email@example.com"
+
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      author: "Your Name"
+
+include:
+  - _pages
