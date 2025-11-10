@@ -1,0 +1,12 @@
+---
+title: "Welcome to the Blog"
+date: 2025-11-10
+categories: news
+excerpt: "This is your first post on the Cook Political-inspired blog site. Edit or add more posts in the _posts folder."
+---
+This is your first post!  
+Feel free to start writing more articles, analysis, and news just like Cook Political Report.
+
+You can organize posts by adding `categories` and `tags` in the Markdown frontmatter at the top.
+
+To create a new post, copy or modify this file with a new title and today’s date.
